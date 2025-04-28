@@ -50,67 +50,65 @@ export default function Home() {
 
 
 <section
-        className="relative mt-8 bg-cover bg-no-repeat bg-center"
-        style={{ backgroundImage: `url(${part2_bg})`, height: '85vh' }}
-      >
-        {/* Overlay */}
-        <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-50"></div>
+  className="relative mt-8 bg-cover bg-no-repeat bg-center"
+  style={{ backgroundImage: `url(${part2_bg})` }}
+>
+  {/* Overlay */}
+  <div className="absolute top-0 left-0 w-full h-full bg-primary opacity-50"></div>
 
-        {/* Vector Image on the Right */}
-        <div
-          className="absolute top-0 right-0 w-2/3 h-full bg-cover bg-center"
-          style={{ backgroundImage: `url(${vectorblue})` }}
-        ></div>
+  {/* Vector Image on the Right (Hidden on Mobile) */}
+  <div
+    className="hidden md:block absolute top-0 right-0 w-2/3 h-full bg-cover bg-center"
+    style={{ backgroundImage: `url(${vectorblue})` }}
+  ></div>
 
-        {/* Content */}
-        <div className="absolute z-10 top-0 left-0 right-0 bottom-0 ">
-          <div className="flex flex-col md:flex-row h-full">
-            
-            {/* About Us Section */}
-<div className="w-full md:w-1/2 flex flex-col justify-center px-5 relative z-20">
-  <div className="bg-white/10  p-6 rounded-xl text-white max-w-md">
-    <h2 className="font-poppins text-3xl font-extrabold">About Us</h2>
-    <p className="font-poppins text-xs font-bold mt-4 leading-5">
-      Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-    </p>
-    <img
-      className="rounded-lg w-64 mt-6"
-      src={part2_img}
-      alt="About Us"
-    />
-  </div>
+  {/* Content */}
+  <div className="relative z-10 flex flex-col md:flex-row h-full p-4 sm:p-8">
+    
+    {/* About Us Section */}
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-start mb-8 md:mb-0">
+      <div className="bg-white/20 p-6 rounded-xl text-white max-w-sm w-full text-center md:text-left">
+        <h2 className="font-poppins text-2xl sm:text-3xl font-extrabold mb-4">
+          About Us
+        </h2>
+        <p className="font-poppins text-xs sm:text-sm font-bold leading-relaxed mb-4">
+          Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+          Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+        </p>
+        <img
+          className="rounded-lg w-48 sm:w-64 mx-auto md:mx-0 mt-4"
+          src={part2_img}
+          alt="About Us"
+        />
+      </div>
+    </div>
+
+    {/* Where Section */}
+    <div className="w-full md:w-1/2 flex flex-col justify-center items-center md:items-end text-center md:text-right">
+      <div className="text-white mb-8 md:mb-0">
+        <h2 className="font-poppins text-3xl sm:text-5xl font-extrabold mb-4">
+          Where
+        </h2>
+        <p className="font-poppins text-xs sm:text-sm font-bold leading-relaxed max-w-sm sm:max-w-md mb-6">
+          Lorem Ipsum is simply dummy text of the printing and typesetting
+          industry. Lorem Ipsum has been the industry's standard dummy text
+          ever since the 1500s, when an unknown printer took a galley of type
+          and scrambled it to make a type specimen book. It has survived not
+          only five centuries, but also the leap into electronic typesetting.
+        </p>
+      </div>
+
+      {/* Button */}
+<div className="w-full flex justify-start mt-6 mb-6">
+  <button className="bg-yellow-400 text-gray-600 font-poppins font-bold px-6 py-2 rounded-full">
+    Help me
+  </button>
 </div>
 
+    </div>
 
-            {/* Where Section */}
-            <div className="w-full md:w-1/2 flex flex-col justify-center items-end px-5 mt-5 md:mt-0 h-full">
-              {/* Top Text */}
-              <div className="text-white mt-5 md:mt-16">
-                <h2 className="font-poppins text-5xl font-extrabold text-right mr-20">Where</h2>
-                <p className="font-poppins text-[10px] font-bold mt-5 mr-5 text-end leading-[18px] max-w-[500px]">
-                  Lorem Ipsum is simply dummy text of the printing and typesetting
-                  industry. Lorem Ipsum has been the industry's standard dummy text
-                  ever since the 1500s, when an unknown printer took a galley of type
-                  and scrambled it to make a type specimen book. It has survived not
-                  only five centuries, but also the leap into electronic typesetting,
-                  remaining essentially unchanged. It was popularised in the 1960s
-                  with the release of Letraset sheets containing Lorem Ipsum passages,
-                  and more recently with desktop publishing software like Aldus
-                  PageMaker including versions of Lorem Ipsum.
-                </p>
-              </div>
-
-              {/* Bottom Button */}
-              <div className="w-full flex justify-start mb-5 ml-5 mt-20">
-                <button className="px-8 py-2 text-gray-600 font-bold bg-yellow-400 rounded-full font-poppins">
-                  Help me
-                </button>
-              </div>
-
-            </div>
-          </div>
-        </div>
-      </section>
+  </div>
+</section>
 
 
     </>
