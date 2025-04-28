@@ -8,19 +8,25 @@ export default function Services() {
     <>
 
 <section className="bg-gray-100 mx-auto py-10">
-      <div className="relative py-10">
-        <h2 className="text-[#7496f3] text-center font-poppins font-extrabold text-4xl md:text-5xl lg:text-6xl leading-tight relative">
-          Service
-          <span className="absolute left-1/2 -translate-x-1/2 -top-4 w-px h-9 bg-[#7496f3] rotate-135"></span>
-          <span className="absolute right-1/2 translate-x-1/2 -top-4 w-px h-9 bg-[#7496f3] -rotate-135"></span>
-        </h2>
-      </div>
+<div className="relative flex justify-center items-center py-10">
+      <h2 className="text-[#7496f3] font-poppins font-extrabold text-[40px] md:text-[64px] leading-[1.4] text-center relative">
+        Service
+        {/* Top Left Line */}
+        <span className="absolute left-0 top-[-20%] w-[35px] h-[2px] bg-[#7496f3] rotate-[135deg]"></span>
+        {/* Top Right Line */}
+        <span className="absolute right-0 top-[-20%] w-[35px] h-[2px] bg-[#7496f3] rotate-[-135deg]"></span>
+        {/* Bottom Left Line */}
+        <span className="absolute left-0 bottom-[-20%] w-[35px] h-[2px] bg-[#7496f3] rotate-[45deg]"></span>
+        {/* Bottom Right Line */}
+        <span className="absolute right-0 bottom-[-20%] w-[35px] h-[2px] bg-[#7496f3] rotate-[-45deg]"></span>
+      </h2>
+    </div>
 
       <div className="flex flex-wrap justify-center gap-6 mt-8">
         {/* Card 1 */}
         <div className="w-72 bg-white rounded-[40px] shadow-md overflow-hidden">
           <img
-            src="../../../assets/images/s1.png"
+            src={serv1}
             alt="Service 1"
             className="w-full h-48 object-cover"
           />
@@ -40,7 +46,7 @@ export default function Services() {
         {/* Card 2 */}
         <div className="w-72 bg-white rounded-[40px] shadow-md overflow-hidden mt-3 md:mt-0">
           <img
-            src="../../../assets/images/s2.png"
+            src={serv2}
             alt="Service 2"
             className="w-full h-48 object-cover"
           />
@@ -60,7 +66,7 @@ export default function Services() {
         {/* Card 3 */}
         <div className="w-72 bg-white rounded-[40px] shadow-md overflow-hidden mt-3 md:mt-0">
           <img
-            src="../../../assets/images/s3.png"
+            src={serv3}
             alt="Service 3"
             className="w-full h-48 object-cover"
           />
